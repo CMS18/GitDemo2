@@ -10,11 +10,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++)
+            try
             {
-                Console.WriteLine("Hello World!");
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Hello World!");
+                }
             }
-            
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error has occurred. Error message as follows:");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
